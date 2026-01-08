@@ -3,14 +3,23 @@
     <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <link rel="stylesheet" href="{{ '/css/custom.css' | url }}">
     <title>Blues Retreat (Belgium edition)</title>
     </head>
     <body>
-      <h1>
-        {{ title | default: "The Blues Retreat (Belgium edition)" }}
-      </h1>
-      <div>
+      <header>
+        <h1>The Blues Retreat (Belgium edition)</h1>
+        <nav>
+          <ul>
+            {% for p in collections.page %}
+            <li><a href="{{ p.url | url }}" {% if page.url == p.url %}aria-current="page"{% endif %}>{{ p.data.title }}</a></li> 
+          {% endfor %}
+          </ul>
+        </nav>
+      </header>
+      <main>
         {{ content }}
-      </div>
+      </main>
     </body>
 </html>
