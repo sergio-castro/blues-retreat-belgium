@@ -6,11 +6,11 @@
     <title>Blues Retreat (Belgium edition)</title>
     </head>
     <body>
-      <header>
-        The Blues Retreat (Belgium edition). Days of belonging, music and dancing.
-      </header>
-      <main>
+      <h1>
+        {{ title | default: "The Blues Retreat (Belgium edition)" }}
+      </h1>
+      <div>
         {{ content }}
-      </main>
+      </div>
     </body>
 </html>
