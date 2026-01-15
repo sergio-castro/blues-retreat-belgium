@@ -1,5 +1,6 @@
 ---
-title: Venue 
+title: The venue 
 ---
 
-We will all eat & sleep at the same venue with a nice dancing floor
+A castle in the Ardennes.
+
